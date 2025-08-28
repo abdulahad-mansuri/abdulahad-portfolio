@@ -30,6 +30,35 @@
     .cta h2 {color:#fff;margin-bottom:20px;}
     .cta a {background:#fff;color:#00aa55;padding:12px 25px;text-decoration:none;border-radius:6px;font-weight:700;}
     footer {background:#111;color:#fff;text-align:center;padding:20px;margin-top:20px;}
+    .profile-container {
+  display: flex;
+  flex-direction: column;  /* image aur text ek column me */
+  justify-content: center; /* vertically center */
+  align-items: center;     /* horizontally center */
+  height: 80vh;            /* screen ka 80% height */
+}
+
+/* Profile image style */
+.profile-img {
+  width: 150px;            /* image size */
+  height: 150px;
+  border-radius: 50%;      /* circle shape */
+  margin-top: 20px;        /* top spacing, adjust karein */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-container {
+    height: auto;          /* mobile me flexible height */
+    padding: 20px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+  }
+}
   </style>
 </head>
 <body>
@@ -120,3 +149,4 @@
 
 </body>
 </html>
+
