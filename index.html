@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdulahad Mansuri | Elite Full Stack Developer</title>
+<title>Abdulahad Mansuri | Laravel Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -17,61 +16,33 @@
 }
 
 body{
-    background:#0b1220;
+    background:linear-gradient(180deg,#0f172a,#020617);
     color:#fff;
     overflow-x:hidden;
-    cursor:none;
 }
 
-/* ===== Custom Cursor Glow ===== */
-.cursor{
-    position:fixed;
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background:#38bdf8;
-    pointer-events:none;
-    mix-blend-mode:screen;
-    box-shadow:0 0 25px #38bdf8,0 0 60px #38bdf8;
-    transform:translate(-50%,-50%);
-    z-index:9999;
-}
-
-/* ===== Background Blobs ===== */
-.blob{
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:radial-gradient(circle,#0ea5e9,transparent);
-    filter:blur(120px);
-    opacity:0.25;
-    z-index:-1;
-}
-.blob1{top:-150px; left:-150px;}
-.blob2{bottom:-150px; right:-150px;}
-
-/* ===== Navbar ===== */
+/* ===== Glass Navbar ===== */
 header{
     position:fixed;
     top:20px;
     left:50%;
     transform:translateX(-50%);
-    width:90%;
+    width:92%;
     max-width:1100px;
-    padding:18px 40px;
+    padding:16px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    border-radius:50px;
+    backdrop-filter:blur(14px);
+    border-radius:40px;
     border:1px solid rgba(255,255,255,0.1);
-    transition:0.3s;
     z-index:1000;
 }
 
-header.shrink{
-    padding:12px 30px;
+header h1{
+    font-size:18px;
+    font-weight:600;
 }
 
 nav a{
@@ -81,169 +52,168 @@ nav a{
     font-weight:500;
     transition:0.3s;
 }
-nav a:hover{color:#38bdf8;}
+nav a:hover{
+    color:#38bdf8;
+}
 
 /* ===== HERO ===== */
 .hero{
     text-align:center;
-    padding:200px 20px 120px;
+    padding:180px 20px 120px;
+    max-width:800px;
+    margin:auto;
 }
 
 .hero img{
-    width:150px;
-    height:150px;
+    width:130px;
+    height:130px;
     border-radius:50%;
     border:3px solid #38bdf8;
     margin-bottom:30px;
-    box-shadow:0 0 50px rgba(56,189,248,0.5);
 }
 
 .hero h2{
-    font-size:54px;
+    font-size:48px;
     font-weight:800;
     margin-bottom:15px;
 }
 
-.typewriter{
-    font-size:20px;
-    color:#38bdf8;
-    margin-bottom:30px;
-    height:30px;
+.hero p{
+    color:#94a3b8;
+    font-size:18px;
+    margin-bottom:35px;
 }
 
 .btn{
-    padding:14px 34px;
-    border-radius:50px;
+    padding:14px 30px;
+    border-radius:40px;
     text-decoration:none;
     font-weight:600;
-    margin:10px;
     display:inline-block;
+    margin:10px;
     transition:0.3s;
 }
 
 .btn-primary{
-    background:#38bdf8;
-    color:#0b1220;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    color:#0f172a;
 }
 .btn-primary:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
     box-shadow:0 10px 30px rgba(56,189,248,0.4);
 }
 
 .btn-outline{
-    border:2px solid #38bdf8;
+    border:1px solid #38bdf8;
     color:#38bdf8;
 }
 .btn-outline:hover{
     background:#38bdf8;
-    color:#0b1220;
+    color:#0f172a;
 }
 
 /* ===== Sections ===== */
 section{
-    padding:120px 8%;
+    padding:100px 8%;
+    max-width:1100px;
+    margin:auto;
 }
 
 section h3{
     text-align:center;
-    font-size:40px;
-    margin-bottom:70px;
+    font-size:36px;
+    margin-bottom:60px;
 }
 
-/* ===== Cards ===== */
+/* ===== Glass Cards ===== */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .card{
     background:rgba(255,255,255,0.05);
-    padding:35px;
+    backdrop-filter:blur(12px);
+    padding:30px;
     border-radius:20px;
-    border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.08);
     transition:0.4s;
-    opacity:0;
-    transform:translateY(40px) scale(0.95);
-}
-
-.card.visible{
-    opacity:1;
-    transform:translateY(0) scale(1);
-    transition:0.6s ease;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-8px);
     border-color:#38bdf8;
-    box-shadow:0 20px 40px rgba(0,0,0,0.5);
-}
-
-.card img{
-    width:100%;
-    border-radius:12px;
-    margin-bottom:15px;
 }
 
 .card h4{
-    margin-bottom:10px;
-    font-size:20px;
+    margin-bottom:12px;
 }
 
 .card p{
-    color:#cbd5e1;
+    color:#94a3b8;
     font-size:15px;
 }
 
-.card a{
-    display:inline-block;
-    margin-top:15px;
-    color:#38bdf8;
-    font-weight:600;
-    text-decoration:none;
-}
-
-/* ===== Skills Bars ===== */
+/* ===== Skills ===== */
 .skill{
     margin-bottom:25px;
 }
+
 .skill-bar{
     height:8px;
     background:#1e293b;
     border-radius:10px;
     overflow:hidden;
 }
+
 .skill-fill{
     height:100%;
-    background:#38bdf8;
-    width:0;
-    transition:1.5s ease;
+    background:linear-gradient(90deg,#38bdf8,#0ea5e9);
 }
 
 /* ===== Footer ===== */
 footer{
     text-align:center;
     padding:40px;
-    color:#94a3b8;
+    color:#64748b;
 }
 
-/* ===== Responsive ===== */
+/* ===== Mobile Premium ===== */
 @media(max-width:768px){
-    .hero h2{font-size:36px;}
-    body{cursor:auto;}
-    .cursor{display:none;}
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding:150px 20px 80px;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    .btn{
+        display:block;
+        width:100%;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    section h3{
+        font-size:26px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-
 <header>
-    <h1>🚀 Abdulahad</h1>
+    <h1>Abdulahad Mansuri</h1>
     <nav>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
@@ -253,10 +223,8 @@ footer{
 
 <section class="hero">
     <img src="image/1771327924462.jfif" alt="Abdulahad">
-
-    <h2>Abdulahad Mansuri</h2>
-    <div class="typewriter"></div>
-
+    <h2>Full Stack Laravel Developer</h2>
+    <p>I build scalable admin panels & financial management systems for real businesses.</p>
     <a href="#projects" class="btn btn-primary">View Projects</a>
     <a href="https://wa.me/919978156250" target="_blank" class="btn btn-outline">Hire Me</a>
 </section>
@@ -264,9 +232,18 @@ footer{
 <section id="services">
     <h3>What I Do</h3>
     <div class="grid">
-        <div class="card"><h4>Admin Panels</h4><p>Enterprise dashboards & role systems.</p></div>
-        <div class="card"><h4>Laravel Apps</h4><p>Secure & scalable backend systems.</p></div>
-        <div class="card"><h4>Financial Systems</h4><p>Invoice & expense management platforms.</p></div>
+        <div class="card">
+            <h4>Admin Panels</h4>
+            <p>Enterprise dashboards with roles & permission systems.</p>
+        </div>
+        <div class="card">
+            <h4>Laravel Applications</h4>
+            <p>Secure backend architecture & scalable APIs.</p>
+        </div>
+        <div class="card">
+            <h4>Financial Systems</h4>
+            <p>Invoice, expense & account ledger automation.</p>
+        </div>
     </div>
 </section>
 
@@ -274,15 +251,21 @@ footer{
     <h3>Core Skills</h3>
     <div class="skill">
         <p>Laravel</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        <div class="skill-bar">
+            <div class="skill-fill" style="width:90%"></div>
+        </div>
     </div>
     <div class="skill">
         <p>PHP</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        <div class="skill-bar">
+            <div class="skill-fill" style="width:85%"></div>
+        </div>
     </div>
     <div class="skill">
         <p>MySQL</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        <div class="skill-bar">
+            <div class="skill-fill" style="width:80%"></div>
+        </div>
     </div>
 </section>
 
@@ -290,77 +273,24 @@ footer{
     <h3>Featured Projects</h3>
     <div class="grid">
         <div class="card">
-            <img src="image/Screenshot (1710).png">
             <h4>Adarsh Traders</h4>
-            <p>Industrial business website.</p>
-            <a href="https://adarshtraders.shop/" target="_blank">🌐 View Live</a>
+            <p>Industrial business website with modern UI & CMS.</p>
         </div>
         <div class="card">
             <h4>Invoice Management System</h4>
-            <p>Automated financial system.</p>
+            <p>Automated billing & transaction tracking platform.</p>
         </div>
     </div>
 </section>
 
 <section id="contact" style="text-align:center;">
     <h3>Let's Build Something Powerful 🚀</h3>
-    <a href="https://wa.me/919978156250" target="_blank" class="btn btn-primary">
-        Contact Me
-    </a>
+    <a href="https://wa.me/919978156250" target="_blank" class="btn btn-primary">Contact Me</a>
 </section>
 
 <footer>
-    <a href="https://www.linkedin.com/in/abdulahad-mansuri-0a911b31b/">
-    © 2025 Abdulahad Mansuri | Crafted with Precision
-    </a>
+© 2025 Abdulahad Mansuri — Crafted with Precision
 </footer>
-
-<script>
-/* Cursor */
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', e=>{
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
-
-/* Navbar Shrink */
-window.addEventListener('scroll',()=>{
-    document.querySelector('header').classList.toggle('shrink',window.scrollY>50);
-});
-
-/* Scroll Reveal */
-const cards = document.querySelectorAll('.card');
-window.addEventListener('scroll',()=>{
-    cards.forEach(card=>{
-        const top = card.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100){
-            card.classList.add('visible');
-        }
-    });
-});
-
-/* Typewriter */
-const texts = [
-    "Full Stack Laravel Developer",
-    "Admin Panel Specialist",
-    "Financial System Architect"
-];
-let i=0,j=0,currentText='',isDeleting=false;
-function type(){
-    if(i<texts.length){
-        if(!isDeleting && j<=texts[i].length){
-            currentText = texts[i].substring(0,j++);
-        }else if(isDeleting && j>=0){
-            currentText = texts[i].substring(0,j--);
-        }
-        document.querySelector('.typewriter').textContent=currentText;
-        if(j==texts[i].length) isDeleting=true;
-        if(j==0 && isDeleting){isDeleting=false;i++;}
-    }
-    setTimeout(type,80);
-}
-type();
-</script>
 
 </body>
 </html>
