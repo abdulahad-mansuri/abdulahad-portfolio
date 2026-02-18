@@ -7,13 +7,13 @@
 
 <title>Abdulahad Mansuri | Full Stack Laravel Developer</title>
 
-<meta name="description" content="Abdulahad Mansuri is a Full Stack Laravel Developer specializing in admin panels, financial systems, and scalable web applications.">
+<meta name="description" content="Abdulahad Mansuri is a Full Stack Laravel Developer specializing in Admin Panels, Financial Systems and scalable business applications using Laravel & PHP.">
 <meta name="keywords" content="Abdulahad Mansuri, Laravel Developer India, PHP Developer, Admin Panel Developer, Financial System Developer">
 <meta name="author" content="Abdulahad Mansuri">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="Abdulahad Mansuri | Laravel Developer">
-<meta property="og:description" content="Full Stack Laravel Developer building scalable business systems.">
+<meta property="og:description" content="Premium Laravel Developer building scalable business systems.">
 <meta property="og:type" content="website">
 
 <link rel="icon" type="image/png" href="image/Favicon.png">
@@ -23,175 +23,233 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 html{scroll-behavior:smooth;}
-body{background:#0f172a;color:#f8fafc;line-height:1.6;}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#020617,#0b1220,#0f172a);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+color:#f8fafc;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 
 .container{max-width:1100px;margin:auto;padding:0 20px;}
 
-/* HEADER */
+/* ================= NAVBAR ================= */
 header{
 position:fixed;width:100%;top:0;
-background:#0f172a;padding:20px 0;
+background:rgba(15,23,42,0.7);
+backdrop-filter:blur(10px);
+padding:18px 0;
 border-bottom:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
 z-index:1000;
 }
+
+header.shrink{
+padding:10px 0;
+}
+
 header .container{
 display:flex;justify-content:space-between;align-items:center;
 }
+
 nav a{
 margin-left:20px;text-decoration:none;
 color:#94a3b8;font-size:14px;
-}
-nav a:hover{color:#38bdf8;}
-
-/* HERO */
-.hero{
-padding:160px 0 100px;text-align:center;
-}
-.hero img{
-width:150px;height:150px;border-radius:50%;
-border:3px solid #38bdf8;margin-bottom:25px;
-}
-.hero h2{font-size:42px;margin-bottom:10px;}
-.hero p{color:#94a3b8;max-width:600px;margin:auto;margin-bottom:30px;}
-
-.btn{
-display:inline-block;padding:12px 24px;
-border-radius:30px;text-decoration:none;
-font-weight:600;margin:5px;
-}
-.btn-primary{background:#38bdf8;color:#0f172a;}
-.btn-outline{border:1px solid #38bdf8;color:#38bdf8;}
-
-section{padding:100px 0;}
-section h3{text-align:center;margin-bottom:50px;font-size:32px;}
-
-/* ABOUT */
-.about p{max-width:800px;margin:auto;color:#94a3b8;text-align:center;}
-
-/* SKILLS */
-.skill{margin-bottom:20px;}
-.skill-name{margin-bottom:5px;}
-.skill-bar{background:#1e293b;border-radius:10px;height:10px;overflow:hidden;}
-.skill-fill{height:100%;background:#38bdf8;width:0%;transition:width 1.5s ease;}
-
-/* PROJECTS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-.card{
-background:#1e293b;padding:20px;border-radius:15px;
 transition:0.3s;
 }
-.card:hover{transform:translateY(-5px);}
-.card img{width:100%;border-radius:10px;margin-bottom:15px;}
-.card p{color:#94a3b8;font-size:14px;margin-bottom:15px;}
 
-/* TIMELINE */
+nav a:hover{color:#38bdf8;}
+
+/* ================= HERO ================= */
+.hero{
+padding:150px 0 80px;
+text-align:center;
+}
+
+.hero img{
+width:140px;height:140px;
+border-radius:50%;
+border:3px solid #38bdf8;
+box-shadow:0 0 30px rgba(56,189,248,0.6);
+margin-bottom:25px;
+}
+
+.hero h2{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#94a3b8;
+max-width:600px;
+margin:auto;
+margin-bottom:30px;
+font-size:15px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+margin:6px;
+transition:0.3s;
+font-size:14px;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+color:#0f172a;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(56,189,248,0.5);
+}
+
+.btn-outline{
+border:1px solid rgba(56,189,248,0.6);
+color:#38bdf8;
+}
+
+.btn-outline:hover{
+background:#38bdf8;
+color:#0f172a;
+}
+
+/* ================= SECTIONS ================= */
+section{padding:80px 0;}
+section h3{
+text-align:center;
+margin-bottom:50px;
+font-size:28px;
+}
+
+/* ================= ABOUT ================= */
+.about p{
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#94a3b8;
+font-size:15px;
+}
+
+/* ================= SKILLS ================= */
+.skill{margin-bottom:25px;}
+.skill-name{margin-bottom:6px;font-size:14px;}
+.skill-bar{
+background:#1e293b;
+border-radius:10px;
+height:8px;
+overflow:hidden;
+}
+.skill-fill{
+height:100%;
+background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+width:0%;
+transition:1.5s ease;
+}
+
+/* ================= PROJECTS ================= */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:linear-gradient(145deg,#1e293b,#111827);
+padding:18px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.4s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#94a3b8;
+font-size:14px;
+margin-bottom:12px;
+}
+
+.card .btn{
+width:100%;
+display:block;
+text-align:center;
+margin:6px 0;
+}
+
+/* ================= EXPERIENCE ================= */
 .timeline-item{
-margin-bottom:30px;padding-left:20px;
-border-left:2px solid #38bdf8;
+background:#111827;
+padding:15px;
+border-radius:12px;
+margin-bottom:20px;
+border-left:3px solid #38bdf8;
 }
-.timeline-item span{font-size:13px;color:#94a3b8;}
 
-/* FOOTER */
+.timeline-item h4{margin-bottom:5px;}
+.timeline-item span{
+font-size:12px;
+color:#94a3b8;
+}
+
+/* ================= FOOTER ================= */
 footer{
-text-align:center;padding:40px 0;
-color:#64748b;border-top:1px solid rgba(255,255,255,0.05);
+text-align:center;
+padding:30px 0;
+color:#64748b;
+font-size:13px;
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
-/* ================= PREMIUM MOBILE OPTIMIZATION ================= */
-@media (max-width: 768px) {
+/* ================= MOBILE OPTIMIZATION ================= */
+@media(max-width:768px){
 
-    body {
-        font-size: 15px;
-    }
+.hero h2{font-size:24px;}
 
-    header {
-        padding: 15px 0;
-    }
+nav{display:none;}
 
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.btn{
+width:100%;
+}
 
-    nav {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+section{
+padding:60px 0;
+}
 
-    nav a {
-        margin-left: 0;
-        font-size: 13px;
-    }
+section h3{
+font-size:22px;
+}
 
-    .hero {
-        padding: 130px 0 60px;
-    }
-
-    .hero img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .hero h2 {
-        font-size: 26px;
-        line-height: 1.3;
-    }
-
-    .hero p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-        margin: 8px 0;
-        font-size: 14px;
-    }
-
-    section {
-        padding: 70px 0;
-    }
-
-    section h3 {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .skill-name {
-        font-size: 14px;
-    }
-
-    .timeline-item h4 {
-        font-size: 16px;
-    }
-
-    footer {
-        font-size: 13px;
-        padding: 30px 0;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<header id="navbar">
 <div class="container">
 <h1>Abdulahad Mansuri</h1>
 <nav>
@@ -215,9 +273,7 @@ color:#64748b;border-top:1px solid rgba(255,255,255,0.05);
 
 <section id="about" class="container about">
 <h3>About Me</h3>
-<p>
-I am a passionate Full Stack Laravel Developer specializing in building secure admin panels, financial systems, and scalable web applications.
-</p>
+<p>I specialize in building secure admin panels, financial systems, and scalable business applications with Laravel architecture and optimized database design.</p>
 </section>
 
 <section id="skills" class="container">
@@ -253,7 +309,8 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 <img src="image/Screenshot (1717).png" alt="Adarsh Traders">
 <h4>Adarsh Traders</h4>
 <p>Industrial business website with modern UI and CMS architecture.</p>
-<a href="https://adarshtraders.shop/" target="_blank" class="btn btn-primary">Live</a>
+
+<a href="https://adarshtraders.shop/" target="_blank" class="btn btn-primary">Live Website</a>
 <a href="https://github.com/abdulahad-mansuri" target="_blank" class="btn btn-outline">GitHub</a>
 </div>
 </div>
@@ -265,13 +322,13 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 <div class="timeline-item">
 <h4>Full Stack Developer</h4>
 <span>2024 – Present</span>
-<p>Developing admin panels, financial systems and scalable web applications.</p>
+<p>Developing admin panels, financial systems and scalable web applications using Laravel and PHP.</p>
 </div>
 
 <div class="timeline-item">
 <h4>Web Development Intern</h4>
 <span>2023 – 2024</span>
-<p>Worked on backend systems and responsive UI development.</p>
+<p>Worked on backend systems, database management and responsive UI development.</p>
 </div>
 
 </section>
@@ -286,6 +343,13 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 </footer>
 
 <script>
+
+/* Navbar Shrink */
+window.addEventListener("scroll",function(){
+document.getElementById("navbar").classList.toggle("shrink",window.scrollY>50);
+});
+
+/* Skill Animation */
 window.addEventListener("scroll",function(){
 document.querySelectorAll(".skill-fill").forEach(bar=>{
 if(bar.getBoundingClientRect().top < window.innerHeight){
@@ -293,6 +357,17 @@ bar.style.width = bar.getAttribute("data-width");
 }
 });
 });
+
+/* Scroll Reveal */
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+cards.forEach(card=>{
+if(card.getBoundingClientRect().top < window.innerHeight-50){
+card.classList.add("visible");
+}
+});
+});
+
 </script>
 
 </body>
