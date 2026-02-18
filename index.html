@@ -4,18 +4,39 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdulahad Mansuri | Ultimate Portfolio</title>
+
+<title>Abdulahad Mansuri | Full Stack Laravel Developer</title>
+
+<meta name="description" content="Abdulahad Mansuri is a Full Stack Laravel Developer specializing in admin panels, invoice systems and scalable financial platforms.">
+<meta name="keywords" content="Abdulahad Mansuri, Laravel Developer India, PHP Developer, Admin Panel Developer, Invoice System">
+<meta name="author" content="Abdulahad Mansuri">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Abdulahad Mansuri | Laravel Developer">
+<meta property="og:description" content="Full Stack Developer building scalable business systems.">
+<meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+html{scroll-behavior:smooth;}
 
 body{
-background:linear-gradient(180deg,#0f172a,#020617);
+background:linear-gradient(-45deg,#0f172a,#020617,#0c1a33,#0f172a);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
 color:#fff;
 overflow-x:hidden;
+cursor:none;
 transition:0.4s;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* Light Mode */
@@ -24,19 +45,29 @@ background:#f1f5f9;
 color:#0f172a;
 }
 body.light header{
-background:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.8);
+}
+
+/* Custom Cursor */
+.cursor{
+position:fixed;
+width:18px;height:18px;
+border-radius:50%;
+background:#38bdf8;
+pointer-events:none;
+box-shadow:0 0 20px #38bdf8,0 0 60px #38bdf8;
+transform:translate(-50%,-50%);
+z-index:9999;
 }
 
 /* Loader */
 #loader{
 position:fixed;
-width:100%;
-height:100%;
+width:100%;height:100%;
 background:#020617;
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
 z-index:9999;
 }
 .loader-ring{
@@ -51,17 +82,17 @@ animation:spin 1s linear infinite;
 /* Navbar */
 header{
 position:fixed;
-top:20px;left:50%;transform:translateX(-50%);
-width:92%;max-width:1100px;padding:16px 30px;
+top:20px;left:50%;
+transform:translateX(-50%);
+width:92%;max-width:1100px;
+padding:16px 30px;
 display:flex;justify-content:space-between;align-items:center;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(14px);
-border-radius:40px;border:1px solid rgba(255,255,255,0.1);
+border-radius:40px;
+border:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
-
-nav a{margin-left:25px;text-decoration:none;color:#cbd5e1;}
-nav a:hover{color:#38bdf8;}
 
 .toggle-btn{
 cursor:pointer;
@@ -72,27 +103,40 @@ color:#38bdf8;
 }
 
 /* Hero */
-.hero{text-align:center;padding:180px 20px 120px;max-width:800px;margin:auto;}
-.hero img{
-width:130px;height:130px;object-fit:cover;
-border-radius:50%;border:3px solid #38bdf8;
-margin-bottom:30px;
-box-shadow:0 0 30px rgba(56,189,248,0.4);
+.hero{
+text-align:center;
+padding:200px 20px 120px;
+max-width:800px;
+margin:auto;
 }
-.hero h2{font-size:48px;margin-bottom:15px;}
-.type{color:#38bdf8;font-weight:600;height:30px;}
-.hero p{color:#94a3b8;margin-bottom:35px;}
+
+.hero img{
+width:130px;height:130px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #38bdf8;
+margin-bottom:30px;
+box-shadow:0 0 40px rgba(56,189,248,0.6);
+}
+
+.hero h2{font-size:50px;margin-bottom:10px;}
+.type{color:#38bdf8;font-weight:600;height:30px;margin-bottom:20px;}
 
 .btn{
-padding:12px 25px;border-radius:40px;
-text-decoration:none;font-weight:600;
-display:inline-block;margin:8px;transition:0.3s;
+padding:12px 25px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+margin:8px;
+transition:0.3s;
 }
+
 .btn-primary{background:#38bdf8;color:#0f172a;}
 .btn-outline{border:1px solid #38bdf8;color:#38bdf8;}
 .btn-outline:hover{background:#38bdf8;color:#0f172a;}
 
-/* Sections */
+/* Section */
 section{padding:100px 8%;max-width:1100px;margin:auto;}
 section h3{text-align:center;font-size:36px;margin-bottom:60px;}
 
@@ -101,7 +145,8 @@ section h3{text-align:center;font-size:36px;margin-bottom:60px;}
 .card{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
-padding:20px;border-radius:20px;
+padding:20px;
+border-radius:20px;
 border:1px solid rgba(255,255,255,0.08);
 transition:0.4s;
 transform-style:preserve-3d;
@@ -125,11 +170,13 @@ border-radius:30px;font-size:14px;text-decoration:none;
 .repo-btn{border:1px solid #38bdf8;color:#38bdf8;}
 .repo-btn:hover{background:#38bdf8;color:#0f172a;}
 
-footer{text-align:center;padding:40px;color:#64748b;}
+footer{text-align:center;padding:40px;color:#94a3b8;}
 
 /* Modal */
 .modal{
-display:none;position:fixed;z-index:9999;
+display:none;
+position:fixed;
+z-index:9999;
 left:0;top:0;width:100%;height:100%;
 background:rgba(0,0,0,0.9);
 padding-top:80px;
@@ -141,35 +188,30 @@ font-size:40px;cursor:pointer;color:#fff;
 }
 
 @media(max-width:768px){
-nav{display:none;}
 .hero h2{font-size:30px;}
 .btn{display:block;width:100%;}
-section{padding:70px 20px;}
+body{cursor:auto;}
+.cursor{display:none;}
 }
 </style>
 </head>
 
 <body>
 
-<div id="loader">
-<div class="loader-ring"></div>
-<p style="margin-top:20px;color:#38bdf8;">Loading Portfolio...</p>
-</div>
+<div id="loader"><div class="loader-ring"></div></div>
+<div class="cursor"></div>
 
 <header>
-<h1>Abdulahad Mansuri</h1>
-<div>
+<h3>Abdulahad Mansuri</h3>
 <span class="toggle-btn" onclick="toggleMode()">🌙 Mode</span>
-</div>
 </header>
 
 <section class="hero">
 <img src="image/1771327924462.jfif" alt="Abdulahad">
 <h2>Full Stack Laravel Developer</h2>
 <div class="type" id="typing"></div>
-<p>I build scalable admin panels & financial systems.</p>
 <a href="#projects" class="btn btn-primary">View Projects</a>
-<a href="https://wa.me/919978156250" target="_blank" class="btn btn-outline">Hire Me</a>
+<a href="https://adarshtraders.shop/" target="_blank" class="btn btn-outline">Adarsh Live</a>
 </section>
 
 <section id="projects">
@@ -190,7 +232,7 @@ section{padding:70px 20px;}
 </section>
 
 <footer>
-© 2025 Abdulahad Mansuri — Ultimate Mode
+© 2025 Abdulahad Mansuri — Final Boss Mode
 </footer>
 
 <div id="imageModal" class="modal">
@@ -203,6 +245,13 @@ section{padding:70px 20px;}
 /* Loader */
 window.addEventListener("load",()=>{
 document.getElementById("loader").style.display="none";
+});
+
+/* Cursor */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 });
 
 /* Typing */
@@ -239,7 +288,7 @@ function closeModal(){
 document.getElementById("imageModal").style.display="none";
 }
 
-/* Dark Light Toggle */
+/* Toggle Mode */
 function toggleMode(){
 document.body.classList.toggle("light");
 }
