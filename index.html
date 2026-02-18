@@ -18,21 +18,6 @@
 
 <link rel="icon" type="image/png" href="image/Favicon.png">
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Abdulahad Mansuri",
-  "jobTitle": "Full Stack Laravel Developer",
-  "url": "https://abdulahad-mansuri.github.io/abdulahad-portfolio/",
-  "sameAs": [
-    "https://github.com/abdulahad-mansuri",
-    "https://www.linkedin.com/in/abdulahad-mansuri-0a911b31b/"
-  ]
-}
-</script>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -77,7 +62,6 @@ font-weight:600;margin:5px;
 .btn-primary{background:#38bdf8;color:#0f172a;}
 .btn-outline{border:1px solid #38bdf8;color:#38bdf8;}
 
-/* SECTION */
 section{padding:100px 0;}
 section h3{text-align:center;margin-bottom:50px;font-size:32px;}
 
@@ -87,13 +71,8 @@ section h3{text-align:center;margin-bottom:50px;font-size:32px;}
 /* SKILLS */
 .skill{margin-bottom:20px;}
 .skill-name{margin-bottom:5px;}
-.skill-bar{
-background:#1e293b;border-radius:10px;height:10px;overflow:hidden;
-}
-.skill-fill{
-height:100%;background:#38bdf8;width:0%;
-transition:width 1.5s ease;
-}
+.skill-bar{background:#1e293b;border-radius:10px;height:10px;overflow:hidden;}
+.skill-fill{height:100%;background:#38bdf8;width:0%;transition:width 1.5s ease;}
 
 /* PROJECTS */
 .grid{
@@ -110,12 +89,10 @@ transition:0.3s;
 .card p{color:#94a3b8;font-size:14px;margin-bottom:15px;}
 
 /* TIMELINE */
-.timeline{position:relative;margin-top:40px;}
 .timeline-item{
 margin-bottom:30px;padding-left:20px;
 border-left:2px solid #38bdf8;
 }
-.timeline-item h4{margin-bottom:5px;}
 .timeline-item span{font-size:13px;color:#94a3b8;}
 
 /* FOOTER */
@@ -124,8 +101,90 @@ text-align:center;padding:40px 0;
 color:#64748b;border-top:1px solid rgba(255,255,255,0.05);
 }
 
-@media(max-width:768px){
-.hero h2{font-size:28px;}
+/* ================= PREMIUM MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 130px 0 60px;
+    }
+
+    .hero img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    section h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+    }
+
+    .timeline-item h4 {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 30px 0;
+    }
 }
 </style>
 </head>
@@ -157,7 +216,7 @@ color:#64748b;border-top:1px solid rgba(255,255,255,0.05);
 <section id="about" class="container about">
 <h3>About Me</h3>
 <p>
-I am a passionate Full Stack Laravel Developer specializing in building secure admin panels, financial systems, and scalable web applications. I focus on clean architecture, performance optimization, and business-driven solutions.
+I am a passionate Full Stack Laravel Developer specializing in building secure admin panels, financial systems, and scalable web applications.
 </p>
 </section>
 
@@ -188,6 +247,7 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 
 <section id="projects" class="container">
 <h3>Featured Project</h3>
+
 <div class="grid">
 <div class="card">
 <img src="image/Screenshot (1717).png" alt="Adarsh Traders">
@@ -201,21 +261,19 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 
 <section id="experience" class="container">
 <h3>Experience</h3>
-<div class="timeline">
 
 <div class="timeline-item">
 <h4>Full Stack Developer</h4>
 <span>2024 – Present</span>
-<p>Developing admin panels, financial systems and scalable web applications using Laravel and PHP.</p>
+<p>Developing admin panels, financial systems and scalable web applications.</p>
 </div>
 
 <div class="timeline-item">
 <h4>Web Development Intern</h4>
 <span>2023 – 2024</span>
-<p>Worked on backend systems, database management, and responsive UI development.</p>
+<p>Worked on backend systems and responsive UI development.</p>
 </div>
 
-</div>
 </section>
 
 <section id="contact" class="container" style="text-align:center;">
@@ -228,7 +286,6 @@ I am a passionate Full Stack Laravel Developer specializing in building secure a
 </footer>
 
 <script>
-/* Animate Skills */
 window.addEventListener("scroll",function(){
 document.querySelectorAll(".skill-fill").forEach(bar=>{
 if(bar.getBoundingClientRect().top < window.innerHeight){
