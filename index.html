@@ -46,11 +46,6 @@ header{
     z-index:1000;
 }
 
-header h1{
-    font-size:18px;
-    font-weight:600;
-}
-
 nav a{
     margin-left:25px;
     text-decoration:none;
@@ -58,9 +53,7 @@ nav a{
     font-weight:500;
     transition:0.3s;
 }
-nav a:hover{
-    color:#38bdf8;
-}
+nav a:hover{color:#38bdf8;}
 
 /* ===== HERO ===== */
 .hero{
@@ -77,7 +70,6 @@ nav a:hover{
     border-radius:50%;
     border:3px solid #38bdf8;
     margin-bottom:30px;
-    box-shadow:0 0 30px rgba(56,189,248,0.4);
 }
 
 .hero h2{
@@ -136,14 +128,14 @@ section h3{
 /* ===== Glass Cards ===== */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
 }
 
 .card{
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(12px);
-    padding:30px;
+    padding:20px;
     border-radius:20px;
     border:1px solid rgba(255,255,255,0.08);
     transition:0.4s;
@@ -154,13 +146,15 @@ section h3{
     border-color:#38bdf8;
 }
 
-.card h4{
-    margin-bottom:12px;
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+    transition:0.4s;
 }
 
-.card p{
-    color:#94a3b8;
-    font-size:15px;
+.card:hover img{
+    transform:scale(1.05);
 }
 
 .card a{
@@ -175,17 +169,13 @@ section h3{
 }
 
 /* ===== Skills ===== */
-.skill{
-    margin-bottom:25px;
-}
-
+.skill{margin-bottom:25px;}
 .skill-bar{
     height:8px;
     background:#1e293b;
     border-radius:10px;
     overflow:hidden;
 }
-
 .skill-fill{
     height:100%;
     background:linear-gradient(90deg,#38bdf8,#0ea5e9);
@@ -201,11 +191,9 @@ footer{
 /* ===== Mobile ===== */
 @media(max-width:768px){
     nav{display:none;}
-    .hero{padding:150px 20px 80px;}
     .hero h2{font-size:30px;}
     .btn{display:block;width:100%;}
     section{padding:70px 20px;}
-    section h3{font-size:26px;}
 }
 </style>
 </head>
@@ -222,9 +210,7 @@ footer{
 </header>
 
 <section class="hero">
-    <!-- SAME IMAGE NAME -->
     <img src="image/1771327924462.jfif" alt="Abdulahad Mansuri">
-
     <h2>Full Stack Laravel Developer</h2>
     <p>I build scalable admin panels & financial management systems for real businesses.</p>
 
@@ -250,29 +236,17 @@ footer{
     </div>
 </section>
 
-<section>
-    <h3>Core Skills</h3>
-    <div class="skill">
-        <p>Laravel</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill">
-        <p>PHP</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill">
-        <p>MySQL</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-    </div>
-</section>
-
 <section id="projects">
     <h3>Featured Projects</h3>
     <div class="grid">
 
         <div class="card">
+            <!-- SCREENSHOT ADDED -->
+            <img src="image/Screenshot (1717).png" alt="Adarsh Traders Website Screenshot">
+
             <h4>Adarsh Traders</h4>
             <p>Industrial business website with modern UI & CMS.</p>
+
             <a href="https://adarshtraders.shop/" target="_blank">
                 🌐 View Live Website
             </a>
