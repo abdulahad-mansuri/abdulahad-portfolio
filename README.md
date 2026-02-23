@@ -1,19 +1,24 @@
 # Abdulahad Mansuri – Developer Portfolio
 
-This is my personal developer portfolio website.
+Personal portfolio website for showcasing services, technical skills, project work, and professional experience.
 
 ## 🚀 Tech Stack
-- HTML
-- CSS
-- Bootstrap
-- JavaScript
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-## 💼 About Me
-I am a PHP & Laravel Developer focused on building Admin Panels, 
-Invoice Systems, and Financial Management Solutions.
+## ✨ Recent Upgrades
+- Improved SEO and social sharing metadata (Open Graph + Twitter card).
+- Upgraded mobile navigation with a collapsible menu.
+- Added accessibility improvements (`aria` labels, reduced motion support, safer external links).
+- Switched to `IntersectionObserver` for smoother skill/project reveal animations.
+- Added dynamic footer year and a back-to-top button.
+
+## 💼 About
+Abdulahad is a Full Stack Laravel Developer focused on building admin panels, invoice systems, and financial management solutions.
 
 ## 🔗 Live Demo
 [View Portfolio](https://abdulahad-mansuri.github.io/abdulahad-portfolio/)
 
-## 📬 Connect With Me
+## 📬 Connect
 - LinkedIn: https://www.linkedin.com/in/abdulahad-mansuri/
